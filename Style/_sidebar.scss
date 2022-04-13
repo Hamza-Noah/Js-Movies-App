@@ -1,0 +1,125 @@
+/* Start Sidebar */
+aside {
+  position: relative;
+  
+  .sidebar-content {
+    width: 60px;
+    height: 100vh;
+    padding-block: 25px 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    transition: left 0.3s ease;
+  }
+  
+  .sidebar-content.menu-opened {
+    transition: left 0.3s ease;
+    top: 0;
+    left: 240px;
+  }
+
+  img {
+    width: 30px;
+  }
+
+  .menu-icon {
+    margin: 20px auto;
+    width: 20px;
+    height: 21px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+  .menu-icon span {
+    background-color: black;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    position: absolute;
+  }
+
+  .menu-icon span:fisrt-child {
+    top: 0;
+  }
+
+  .menu-icon span:nth-child(2) {
+    top: 6px;
+  }
+
+  .menu-icon span:nth-child(3) {
+    top: 12px;
+  }
+
+  .menu-icon span:last-child {
+    top: 18px;
+  }
+
+  .menu-icon.open span:nth-child(2),
+  .menu-icon.open span:nth-child(3) {
+    opacity: 0;
+  }
+
+  .menu-icon.open span:first-child {
+    top: 6px;
+    height: 4px;
+    border-radius: 2px;
+    transform: rotate(45deg);
+  }
+  .menu-icon.open span:last-child {
+    top: 6px;
+    height: 4px;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+  }
+
+  li {
+    padding-bottom: 10px;
+  }
+
+  .slide-out-menu {
+    position: absolute;
+    left: -240px;
+    top: 0;
+    width: 240px;
+    height: 100vh;
+    z-index: 0;
+    transition: left ease-in-out 1s;
+  }
+
+  .slide-out-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .slide-out-menu.menu-visible {
+    left: 0;
+  }
+
+  .slide-out-menu a {
+    color: white;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 1.2em;
+  }
+
+  .slide-out-menu ul.change-movies {
+    margin-top: 10px;
+  }
+
+  .slide-out-menu ul.change-movies li {
+    padding: 20px 0 8px 30px;
+    font-size: 0.8rem;
+  }
+
+  .slide-out-menu p {
+    color: white;
+  }
+}
+/* End Sidebar */

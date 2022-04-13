@@ -1,11 +1,13 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 body {
   background-color: black;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .list-unstyled {
@@ -20,14 +22,36 @@ a {
 /* Start Sidebar */
 aside {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
+}
+
+aside .sidebar-content {
   width: 60px;
+  height: 100vh;
   padding-block: 25px 15px;
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
+}
+
+aside .sidebar-content.menu-opened {
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
+  top: 0;
+  left: 240px;
 }
 
 aside img {
@@ -49,6 +73,7 @@ aside .menu-icon span {
   width: 100%;
   left: 0;
   border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   position: absolute;
 }
@@ -56,12 +81,15 @@ aside .menu-icon span {
 aside .menu-icon span:fisrt-child {
   top: 0;
 }
+
 aside .menu-icon span:nth-child(2) {
   top: 6px;
 }
+
 aside .menu-icon span:nth-child(3) {
   top: 12px;
 }
+
 aside .menu-icon span:last-child {
   top: 18px;
 }
@@ -75,13 +103,16 @@ aside .menu-icon.open span:first-child {
   top: 6px;
   height: 4px;
   border-radius: 2px;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
+
 aside .menu-icon.open span:last-child {
   top: 6px;
   height: 4px;
   border-radius: 2px;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 aside li {
@@ -95,29 +126,46 @@ aside .slide-out-menu {
   width: 240px;
   height: 100vh;
   z-index: 0;
-  background-color: white;
+  -webkit-transition: left ease-in-out 1s;
   transition: left ease-in-out 1s;
 }
 
-aside .slide-out-menu.menu-visible  {
+aside .slide-out-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+aside .slide-out-menu.menu-visible {
   left: 0;
 }
 
 aside .slide-out-menu a {
-  color: black;
+  color: white;
   display: block;
   margin-bottom: 6px;
   font-size: 1.2em;
 }
 
-.slide-out-menu ul{
+aside .slide-out-menu ul.change-movies {
   margin-top: 10px;
 }
 
-.slide-out-menu ul li{
-  padding: 20px 0 10px 30px;
-  font-size: .8rem;
+aside .slide-out-menu ul.change-movies li {
+  padding: 20px 0 8px 30px;
+  font-size: 0.8rem;
+}
 
+aside .slide-out-menu p {
+  color: white;
 }
 
 /* End Sidebar */
+/*# sourceMappingURL=style.css.map */
