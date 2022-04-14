@@ -19,6 +19,43 @@ a {
   color: black;
 }
 
+@media (max-width: 575px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 750px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 970px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* start upper bar */
 /* Start Sidebar */
 aside {
   position: relative;
@@ -43,22 +80,16 @@ aside .sidebar-content {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  -webkit-transition: left 0.3s ease;
-  transition: left 0.3s ease;
+  -webkit-transition: left 1s ease;
+  transition: left 1s ease;
+  left: 0px;
 }
 
-aside .sidebar-content.menu-opened {
-  -webkit-transition: left 0.3s ease;
-  transition: left 0.3s ease;
-  top: 0;
-  left: 240px;
-}
-
-aside img {
+aside .sidebar-content img {
   width: 30px;
 }
 
-aside .menu-icon {
+aside .sidebar-content .menu-icon {
   margin: 20px auto;
   width: 20px;
   height: 21px;
@@ -67,39 +98,34 @@ aside .menu-icon {
   z-index: 1;
 }
 
-aside .menu-icon span {
+aside .sidebar-content .menu-icon span {
   background-color: black;
   height: 3px;
   width: 100%;
   left: 0;
   border-radius: 3px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   position: absolute;
 }
 
-aside .menu-icon span:fisrt-child {
+aside .sidebar-content .menu-icon span:fisrt-child {
   top: 0;
 }
 
-aside .menu-icon span:nth-child(2) {
+aside .sidebar-content .menu-icon span:nth-child(2) {
   top: 6px;
 }
 
-aside .menu-icon span:nth-child(3) {
+aside .sidebar-content .menu-icon span:nth-child(3) {
   top: 12px;
 }
 
-aside .menu-icon span:last-child {
+aside .sidebar-content .menu-icon span:last-child {
   top: 18px;
 }
 
-aside .menu-icon.open span:nth-child(2),
-aside .menu-icon.open span:nth-child(3) {
-  opacity: 0;
-}
-
-aside .menu-icon.open span:first-child {
+aside .sidebar-content .menu-icon.open span:first-child {
   top: 6px;
   height: 4px;
   border-radius: 2px;
@@ -107,7 +133,7 @@ aside .menu-icon.open span:first-child {
           transform: rotate(45deg);
 }
 
-aside .menu-icon.open span:last-child {
+aside .sidebar-content .menu-icon.open span:last-child {
   top: 6px;
   height: 4px;
   border-radius: 2px;
@@ -115,8 +141,17 @@ aside .menu-icon.open span:last-child {
           transform: rotate(-45deg);
 }
 
-aside li {
+aside .sidebar-content li {
   padding-bottom: 10px;
+}
+
+aside .sidebar-content .menu-icon.open span:nth-child(2),
+aside .sidebar-content .menu-icon.open span:nth-child(3) {
+  opacity: 0;
+}
+
+aside .sidebar-content.menu-opened {
+  left: 240px;
 }
 
 aside .slide-out-menu {
@@ -125,12 +160,10 @@ aside .slide-out-menu {
   top: 0;
   width: 240px;
   height: 100vh;
+  padding: 25px 30px 40px;
   z-index: 0;
-  -webkit-transition: left ease-in-out 1s;
-  transition: left ease-in-out 1s;
-}
-
-aside .slide-out-menu {
+  -webkit-transition: left ease 1s;
+  transition: left ease 1s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,8 +176,25 @@ aside .slide-out-menu {
           justify-content: space-between;
 }
 
+aside .slide-out-menu ul.change-movies li {
+  font-size: 0.8rem;
+}
+
 aside .slide-out-menu.menu-visible {
   left: 0;
+}
+
+aside .social-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+aside .social-links ul a {
+  margin-inline: 10px;
 }
 
 aside .slide-out-menu a {
@@ -152,15 +202,7 @@ aside .slide-out-menu a {
   display: block;
   margin-bottom: 6px;
   font-size: 1.2em;
-}
-
-aside .slide-out-menu ul.change-movies {
-  margin-top: 10px;
-}
-
-aside .slide-out-menu ul.change-movies li {
-  padding: 20px 0 8px 30px;
-  font-size: 0.8rem;
+  padding-block: 10px;
 }
 
 aside .slide-out-menu p {

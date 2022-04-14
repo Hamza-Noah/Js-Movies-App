@@ -1,0 +1,9 @@
+main {
+    .row{
+        display: flex;
+        justify-content: space-between;
+        div{
+            flex-basis: 30%;
+        }
+    }
+}
