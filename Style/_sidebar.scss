@@ -1,6 +1,8 @@
 /* Start Sidebar */
 aside {
-  position: relative;
+  position: fixed;
+  top: 0;
+  bottom: 0;
 
   .sidebar-content {
     width: 60px;

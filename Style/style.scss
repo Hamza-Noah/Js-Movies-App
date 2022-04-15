@@ -17,6 +17,10 @@ a {
   color: black;
 }
 
+.w-100{
+  max-width: 100%;
+}
+
 // media rules for conatiner
 // extra small screens
 @media (max-width: 575px) {
@@ -67,3 +71,4 @@ a {
 /* start upper bar */
 
 @import "sidebar";
+@import "movies";

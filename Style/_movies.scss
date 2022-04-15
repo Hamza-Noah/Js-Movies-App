@@ -2,8 +2,11 @@ main {
     .row{
         display: flex;
         justify-content: space-between;
-        div{
+        flex-wrap: wrap;
+        div.movie{
             flex-basis: 30%;
         }
+
+        
     }
 }
