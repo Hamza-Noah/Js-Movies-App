@@ -29,11 +29,11 @@ function displayMovies(key) {
         <div class="img">
              <img class="w-100" src="https://image.tmdb.org/t/p/w500${key[i].poster_path}"/>
         </div>     
-            <div class=overlay">
+            <div class="overlay">
                 <h3>${key[i].title}</h3>
                 <p class"description>${key[i].overview}</p>
-                <p class"date">${key[i].release_date}</p>
                 <p class"rate">${key[i].vote_average}</p>
+                <p class"date">${key[i].release_date}</p>
              </div>
         </div>
         `;
