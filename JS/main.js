@@ -27,7 +27,7 @@ function displayMovies(key) {
     movies += `
         <div class="movie">
         <div class="img">
-             <img class="w-100" src="https://image.tmdb.org/t/p/w500${key[i].poster_path}"/>
+             <img  class="w-100" src="https://image.tmdb.org/t/p/w500${key[i].poster_path}"/>
         </div>     
             <div class="overlay">
                 <h3>${key[i].title}</h3>

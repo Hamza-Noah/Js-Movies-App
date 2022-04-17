@@ -23,6 +23,12 @@ a {
   max-width: 100%;
 }
 
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (max-width: 575px) {
   .container {
     width: 90%;
@@ -234,6 +240,12 @@ main .row .movie {
   margin-bottom: 30px;
   border-radius: 3px;
   overflow: hidden;
+  height: 500px;
+}
+
+main .row .movie .img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main .row .movie:hover .overlay {
@@ -271,5 +283,36 @@ main .row h3 {
 main .row p {
   -webkit-margin-after: 15px;
           margin-block-end: 15px;
+}
+
+.search {
+  padding-block: 50px;
+}
+
+.search .input-group {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.search .input-group input {
+  width: 90%;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+.search .input-group input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.search .input-group input:-ms-input-placeholder {
+  text-align: center;
+}
+
+.search .input-group input::-ms-input-placeholder {
+  text-align: center;
+}
+
+.search .input-group input::placeholder {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

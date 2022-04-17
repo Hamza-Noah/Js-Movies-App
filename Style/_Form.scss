@@ -1,0 +1,14 @@
+.search{
+    padding-block: 50px;
+    .input-group{
+        flex-basis: 50%;
+        input{
+            width: 90%;
+            padding: 10px;
+            font-size: 1.1rem;
+        }
+        input::placeholder{
+            text-align: center;
+        }
+    }
+}

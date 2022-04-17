@@ -21,6 +21,10 @@ a {
   max-width: 100%;
 }
 
+.row{
+  display: flex;
+}
+
 // media rules for conatiner
 // extra small screens
 @media (max-width: 575px) {
@@ -72,3 +76,4 @@ a {
 
 @import "sidebar";
 @import "movies";
+@import "Form";

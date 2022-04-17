@@ -9,6 +9,10 @@ main {
       margin-bottom: 30px;
       border-radius: 3px;
       overflow: hidden;
+      height: 500px;
+    }
+    .movie .img {
+      object-fit: cover;
     }
     .movie:hover .overlay {
       bottom: 0;
@@ -34,6 +38,5 @@ main {
     p {
       margin-block-end: 15px;
     }
-
   }
 }
