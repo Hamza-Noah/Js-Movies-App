@@ -1,14 +1,42 @@
-.search{
-    padding-block: 50px;
-    .input-group{
-        flex-basis: 50%;
-        input{
-            width: 90%;
-            padding: 10px;
-            font-size: 1.1rem;
-        }
-        input::placeholder{
-            text-align: center;
-        }
-    }
+.input-group {
+  flex-basis: 48%;
+}
+
+input {
+  outline: none;
+  padding: 10px;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+input:focus {
+  border: 1px #2878a7 solid;
+  box-shadow: 0 0 0 0.2rem #2878a7;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+.search .row,
+footer .row {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.search {
+  padding-block: 50px;
+}
+
+footer {
+  margin-block: 50px 100px;
+  h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+  }
 }

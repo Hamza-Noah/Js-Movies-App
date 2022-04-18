@@ -285,34 +285,64 @@ main .row p {
           margin-block-end: 15px;
 }
 
+.input-group {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+}
+
+input {
+  outline: none;
+  padding: 10px;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+input:focus {
+  border: 1px #2878a7 solid;
+  -webkit-box-shadow: 0 0 0 0.2rem #2878a7;
+          box-shadow: 0 0 0 0.2rem #2878a7;
+}
+
+input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+input:-ms-input-placeholder {
+  text-align: center;
+}
+
+input::-ms-input-placeholder {
+  text-align: center;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+.search .row,
+footer .row {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .search {
   padding-block: 50px;
 }
 
-.search .input-group {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+footer {
+  margin-block: 50px 100px;
 }
 
-.search .input-group input {
-  width: 90%;
-  padding: 10px;
-  font-size: 1.1rem;
+footer h2 {
+  font-size: 2rem;
+  font-weight: lighter;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.search .input-group input::-webkit-input-placeholder {
-  text-align: center;
-}
-
-.search .input-group input:-ms-input-placeholder {
-  text-align: center;
-}
-
-.search .input-group input::-ms-input-placeholder {
-  text-align: center;
-}
-
-.search .input-group input::placeholder {
-  text-align: center;
+footer .input-group {
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=style.css.map */
