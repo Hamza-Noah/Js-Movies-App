@@ -71,6 +71,7 @@ aside {
   position: fixed;
   top: 0;
   bottom: 0;
+  z-index: 3;
 }
 
 aside .sidebar-content {
@@ -186,6 +187,7 @@ aside .slide-out-menu {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: black;
 }
 
 aside .slide-out-menu ul.change-movies li {
@@ -340,6 +342,7 @@ footer h2 {
   font-size: 2rem;
   font-weight: lighter;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 30px;
 }
 
 footer .input-group {

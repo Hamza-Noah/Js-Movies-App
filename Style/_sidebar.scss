@@ -3,6 +3,7 @@ aside {
   position: fixed;
   top: 0;
   bottom: 0;
+  z-index: 3;
 
   .sidebar-content {
     width: 60px;
@@ -95,6 +96,7 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: black;
   }
 
   .slide-out-menu ul.change-movies li {

@@ -11,7 +11,7 @@ menu.addEventListener("click", function () {
 });
 
 // Fetching API
-const moviesContainer  = document.querySelector(".movies-container");
+const moviesContainer = document.querySelector(".movies-container");
 
 async function getMovies(type) {
   let apiRespone = await fetch(
@@ -41,14 +41,38 @@ function displayMovies(key) {
   moviesContainer.innerHTML = movies;
 }
 
-// getMovies("trending/all/day");
-// getMovies("movie/popular");    
-// getMovies("movie/top_rated");
-// getMovies("movie/upcoming"); 
-getMovies("movie/now_playing"); 
+
+getMovies("movie/now_playing");
+
+// Chnge Movies
+
+const nowPlaying = document.getElementById("now-playing");
+const popular = document.getElementById("popular");
+const topRated = document.getElementById("top-rated");
+const trending = document.getElementById("trending");
+const upcoming = document.getElementById("upcoming");
 
 
+nowPlaying.addEventListener("click", function () {
+  getMovies("movie/now_playing");
+});
+
+popular.addEventListener("click", function(){
+getMovies("movie/popular");
+});
+
+topRated.addEventListener("click", function(){
+  getMovies("movie/top_rated");    
+});
+
+trending.addEventListener("click", function(){
+  getMovies("trending/all/day");
+});
+
+upcoming.addEventListener("click", function(){
+  getMovies("movie/upcoming");
+});
 
 
-    searchURL = "https://api.themoviedb.org/3/search/movie?query=mad&api_key=f31de6b44ad5fe28935eff41302201c7&language=en-US&include_adult=false";
-   
+searchURL =
+  "https://api.themoviedb.org/3/search/movie?query=mad&api_key=f31de6b44ad5fe28935eff41302201c7&language=en-US&include_adult=false";
