@@ -228,16 +228,16 @@ main .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 main .row .movie {
-  -ms-flex-preferred-size: 31.5%;
-      flex-basis: 31.5%;
+  -ms-flex-preferred-size: 360px;
+      flex-basis: 360px;
   position: relative;
   margin-bottom: 30px;
   border-radius: 3px;
@@ -285,6 +285,20 @@ main .row h3 {
 main .row p {
   -webkit-margin-after: 15px;
           margin-block-end: 15px;
+}
+
+@media (max-width: 768px) {
+  main .row {
+    margin-left: 90px;
+  }
+}
+
+@media (min-width: 768px) {
+  main .row {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .input-group {
