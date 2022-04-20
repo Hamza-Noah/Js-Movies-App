@@ -41,7 +41,7 @@ a {
     padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: 60px;
   }
 }
 
@@ -239,10 +239,10 @@ main .row .movie {
   -ms-flex-preferred-size: 360px;
       flex-basis: 360px;
   position: relative;
+  margin-inline: 10px;
   margin-bottom: 30px;
   border-radius: 3px;
   overflow: hidden;
-  height: 500px;
 }
 
 main .row .movie .img {
@@ -269,7 +269,7 @@ main .row .movie .overlay {
           flex-direction: column;
   height: 100%;
   border-radius: 3px;
-  padding-inline: 5px;
+  padding-inline: 15px;
   background-color: rgba(255, 255, 255, 0.8);
   -webkit-transition: bottom 1s;
   transition: bottom 1s;
@@ -289,7 +289,13 @@ main .row p {
 
 @media (max-width: 768px) {
   main .row {
-    margin-left: 90px;
+    margin-left: 80px;
+  }
+  main h3 {
+    font-size: 1.5rem !important;
+  }
+  main p {
+    font-size: 0.8rem;
   }
 }
 
@@ -298,6 +304,9 @@ main .row p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  main .row .movie {
+    height: 500px;
   }
 }
 

@@ -6,10 +6,10 @@ main {
     .movie {
       flex-basis: 360px;
       position: relative;
+      margin-inline: 10px;
       margin-bottom: 30px;
       border-radius: 3px;
       overflow: hidden;
-      height: 500px;
     }
     .movie .img {
       object-fit: cover;
@@ -25,7 +25,7 @@ main {
       flex-direction: column;
       height: 100%;
       border-radius: 3px;
-      padding-inline: 5px;
+      padding-inline: 15px;
       background-color: rgba(255, 255, 255, 0.8);
       transition: bottom 1s;
       text-align: center;
@@ -41,12 +41,23 @@ main {
   }
   @media (max-width: 768px) {
     .row {
-      margin-left: 90px;
+      margin-left: 80px;
+    }
+
+    h3 {
+      font-size: 1.5rem !important;
+    }
+
+    p {
+      font-size: 0.8rem;
     }
   }
   @media (min-width: 768px) {
     .row {
       justify-content: space-between;
+    }
+    .row .movie {
+      height: 500px;
     }
   }
 }
