@@ -332,6 +332,15 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
 
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 input:focus {
   border-color: #80bdff;
   outline: 0;
@@ -376,6 +385,10 @@ footer {
   margin-block: 50px 100px;
 }
 
+footer .row {
+  margin-bottom: 20px;
+}
+
 footer h2 {
   font-size: 2rem;
   font-weight: lighter;
@@ -390,6 +403,14 @@ footer .input-group {
 footer input {
   font-size: .9rem;
   font-weight: lighter;
+}
+
+footer button {
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-weight: lighter;
+  color: #dc3545;
+  border: solid 1px #dc3545;
 }
 
 @media (min-width: 768px) {

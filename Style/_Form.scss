@@ -19,6 +19,15 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance:none;
 }
 
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 input:focus {
   border-color: #80bdff;
   outline: 0;
@@ -42,6 +51,9 @@ footer .row {
 
 footer {
   margin-block: 50px 100px;
+  .row{
+    margin-bottom: 20px;
+  }
   h2 {
     font-size: 2rem;
     font-weight: lighter;
@@ -56,6 +68,14 @@ footer {
   input{
     font-size: .9rem;
     font-weight: lighter;
+  }
+
+  button{
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-weight: lighter;
+    color: rgb(220, 53, 69);;
+    border: solid 1px rgb(220, 53, 69);
   }
 }
 
