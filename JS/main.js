@@ -73,6 +73,13 @@ upcoming.addEventListener("click", function(){
   getMovies("movie/upcoming");
 });
 
+// Search
+
+const searchByWord = document.querySelector("#searchByWord");
+
+searchByWord.addEventListener("chnge", function(){
+  
+})
 
 searchURL =
   "https://api.themoviedb.org/3/search/movie?query=mad&api_key=f31de6b44ad5fe28935eff41302201c7&language=en-US&include_adult=false";
